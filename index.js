@@ -4,7 +4,7 @@ const app = express();
 
 const morgan = require("morgan"); //Middleware are functions that can be used for handling request and response objects.s
 const cors = require("cors");
-
+app.use(express.static("dist"));
 app.use(cors());
 
 morgan.token("postData", (req) => {
